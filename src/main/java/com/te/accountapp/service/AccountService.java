@@ -8,9 +8,9 @@ public interface AccountService {
 	
 	public Account addAccount(Account account);
 
-	public String updateAccount(Long accountId,Account account);
+	public Account updateAccount(Long accountId);
 
-	public String deleteAccount(Long accountId);
+	public void deleteAccount(Long accountId);
 	
 	public String addAmount(Long accountId,double amount);
 	

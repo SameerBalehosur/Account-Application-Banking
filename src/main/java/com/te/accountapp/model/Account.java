@@ -14,13 +14,21 @@ import javax.validation.Valid;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
 @Table(name = "User_Account_Details")
 @Valid
+@AllArgsConstructor
+@NoArgsConstructor
 public class Account implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "Account_Id")
@@ -52,4 +60,24 @@ public class Account implements Serializable {
 	@NotNull(message ="Value should be Active or Inactive")
 	@Enumerated(EnumType.STRING)
 	private  accountStatus accountStatus ;
+
+	/*
+	 * public Account(@NotNull(message = "Id should not be null") Long accountId,
+	 * 
+	 * @NotNull(message = "Username field is required") String accountHolderName,
+	 * com.te.accountapp.model.Account.@NotNull(message = "Choose any option")
+	 * gender gender,
+	 * 
+	 * @NotNull(message = "Address should not be null") String address,
+	 * 
+	 * @NotNull(message = "Nominee fields required") String nominee,
+	 * 
+	 * @DecimalMin(value = "0.0", message = "It should not be negativel") double
+	 * currentAmount, com.te.accountapp.model.Account.@NotNull(message =
+	 * "Value should be Active or Inactive") accountStatus accountStatus) { super();
+	 * this.accountId = accountId; this.accountHolderName = accountHolderName;
+	 * this.gender = gender; this.address = address; this.nominee = nominee;
+	 * this.currentAmount = currentAmount; this.accountStatus = accountStatus; }
+	 * public Account() { super(); }
+	 */
 }

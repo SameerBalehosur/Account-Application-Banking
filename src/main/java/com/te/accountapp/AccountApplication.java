@@ -12,7 +12,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableSwagger2
 public class AccountApplication {
-//This is main method
 	public static void main(String[] args) {
 		SpringApplication.run(AccountApplication.class, args);
 	}
